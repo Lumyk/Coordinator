@@ -12,7 +12,7 @@ open class RootDetailCoordinator<VC: UIViewController & Coordinated>: DetailCoor
     public private(set) weak var delegate: CoordinatorDelegate?
     public private(set) var coordination: Coordination
     
-    public init(coordination: Coordination, delegate: CoordinatorDelegate? = nil, configuration: ((VC) throws -> Void)? = nil) throws {
+    open init(coordination: Coordination, delegate: CoordinatorDelegate? = nil, configuration: ((VC) throws -> Void)? = nil) throws {
         self.coordination = coordination
         self.delegate = delegate
         
@@ -22,5 +22,5 @@ open class RootDetailCoordinator<VC: UIViewController & Coordinated>: DetailCoor
         self.viewController = viewController
     }
     
-    public func navigate(coordination: Coordination) throws { /* for override */ }
+    open func navigate(coordination: Coordination) throws { /* for override */ }
 }
