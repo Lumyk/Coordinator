@@ -12,7 +12,7 @@ open class RootDetailCoordinator<VC: UIViewController & Coordinated>: DetailCoor
     public private(set) weak var delegate: CoordinatorDelegate?
     public private(set) var coordination: Coordination
     
-    open init(coordination: Coordination, delegate: CoordinatorDelegate? = nil, configuration: ((VC) throws -> Void)? = nil) throws {
+    public init(coordination: Coordination, delegate: CoordinatorDelegate? = nil, configuration: ((VC) throws -> Void)? = nil) throws {
         self.coordination = coordination
         self.delegate = delegate
         
